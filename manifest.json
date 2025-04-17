@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Sequential Downloader",
+  "version": "1.0.0",
+  "description": "ファイルを1つずつ逐次ダウンロードするChrome拡張機能。",
+  "permissions": [
+    "downloads",
+    "storage",
+    "contextMenus",
+    "scripting",
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Click to open side panel."
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": {},
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

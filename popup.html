@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>逐次ダウンローダー</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <style>
+    body { min-width: 400px; }
+    .queue-list { max-height: 200px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h6>ダウンロードキュー</h6>
+    <ul id="queue" class="collection queue-list"></ul>
+    <div class="row" style="text-align: right;">
+      <button id="pause" class="btn waves-effect">一時停止</button>
+      <button id="resume" class="btn waves-effect">再開</button>
+      <button id="clear" class="btn red waves-effect">クリア</button>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:16px;">
+    <button id="open-sidepanel" class="btn blue waves-effect">サイドパネルで開く</button>
+  </div>
+  <script src="popup.js"></script>
+  <script src="materialize.min.js"></script>
+</body>
+</html>
